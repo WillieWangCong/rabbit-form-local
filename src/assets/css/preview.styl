@@ -1,0 +1,163 @@
+.body.rabbit_preview{
+  width: 100%;
+  height: 100%;
+  background: #fff;
+   position: fixed;
+  top:0;
+  left:0;
+  z-index: 1000;
+  .close{
+    position: fixed;
+    top: 30px;
+    right: 50px;
+  }
+}
+.wrapper.rabbit_preview {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;  
+  background: #fff;
+  position: fixed;
+  top:0;
+  left:0;  
+  .main{
+    width: 60%;
+    height: 80%;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: auto;
+  }
+  .main>.header {
+    background: #394264;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .main>.preview {
+    position: fixed;
+    top: 50px;
+    left: 130px;
+  }
+
+  .main>.preview li {
+    margin: 30px 0;
+    cursor: pointer;
+  }
+
+  .main>.preview li:first-child {
+    margin-top: 0;
+  }
+
+  .main>.preview p {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .select_input_show {
+    cursor: default!important;
+  }
+
+  &.phone {
+    width: 390px;
+    height: 800px;
+    background: url('../images/prev-imgs/bg-phone.png') center no-repeat;
+    background-size: 390px 800px;
+    padding-top: 98px;
+    box-sizing: border-box;
+    top:50%;
+    left:50%;
+    margin-left -195px;
+    margin-top -400px;
+  }
+
+  &.phone>.main>.header {
+    background: #394264;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  &.phone>.main>.preview {
+    position: fixed;
+    top: 50px;
+    left: 130px;
+  }
+
+  &.phone>.main>.preview p {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  &.phone .main {
+    width: 338px;
+    height: 600px;
+    overflow: hidden;
+    margin: 0 auto;
+    background: #fff;
+    border: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+
+  .date_input_show .picker_background{
+    width: 338px;
+    height: 600px;
+    left: 50%;
+    margin-left: -169px;
+    top: 50%;
+    margin-top: -300px;
+  }
+  .pullselect_input_show .select_picker{
+    width: 338px;
+    height: 600px;
+    left: 50%;
+    margin-left: -169px;
+    top: 50%;
+    margin-top: -300px;
+  }
+  .people_input_show .people_picker_mb{
+    width: 338px;
+    height: 600px;
+    left: 50%;
+    margin-left: -169px;
+    top: 50%;
+    margin-top: -300px;
+    .header{
+      width: 338px!important;
+      height: 600px;
+      left: 50%;
+      margin-left: -169px;
+      top: 50%;
+      margin-top: -300px;
+    }
+  }
+  .dept_input_show .dept_picker_mb{
+    width: 338px;
+    height: 600px;
+    left: 50%;
+    margin-left: -169px;
+    top: 50%;
+    margin-top: -300px;
+    overflow: auto;
+    .header{
+      width: 338px!important;
+      height: 600px;
+      left: 50%;
+      margin-left: -169px;
+      top: 50%;
+      margin-top: -300px;
+    }
+  }
+}

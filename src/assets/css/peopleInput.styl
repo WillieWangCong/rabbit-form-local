@@ -1,0 +1,340 @@
+@import './common.styl';
+.people_input{
+    width: 100%;
+    padding: toRem(10);
+    box-sizing: border-box;
+    background: #f5f5fc;
+    position: relative;
+    img{
+        display: block;
+        width: toRem(23);
+        height: toRem(20);
+        margin: toRem(5) auto;
+    }
+    h2{
+        color: #6e8ac9;
+        font-size: toRem(14);
+        text-align center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+.people_input_show{
+    width: 100%;
+    padding: toRem(20) toRem(40);
+    box-sizing: border-box;
+    background: #fff;
+    border-bottom: 1px dashed #f3f3f3;
+    cursor: move;
+    position: relative;
+    &:hover{
+        background: #f3fbff;
+        input{
+            border: 1px solid #89b6fa;               
+        }
+    }
+    &.on{
+        background: #fdf8f0;
+        input{
+            border: 1px solid #facd89;
+        }
+    }    
+    label{
+        font-size: toRem(14);
+        display: block;
+    }
+    input{
+        width: 100%
+        height: toRem(45);
+        border: 1px solid #e5e5e5;
+        box-sizing: border-box;
+    }
+    .shade{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+}
+.people_input_edit{
+    h3{
+        font-size: toRem(14);
+        font-weight: bold;        
+        background: #f3fbff;
+        &:after{
+            content: '';
+            display: inline-block;
+            width:0px;
+            height:0px;
+            border-left:toRem(5) solid transparent;
+            border-right:toRem(5) solid transparent;
+            border-bottom:toRem(10) solid #2f2f2f; 
+            font-size:0px;
+            line-height:0px;
+            float: right;
+            margin-top: toRem(5);
+            cursor: pointer;
+        }
+    }
+    .base_attr{
+        h3{        
+            padding: toRem(40) toRem(20) toRem(20) toRem(20);        
+        }
+        .edit_content{
+            padding: toRem(10) toRem(20) toRem(30) toRem(20);
+            font-size: toRem(12);            
+            p:first-child label{
+                margin-top:0;
+            }                       
+        }   
+    }
+    .base_style{
+        h3{        
+            padding: toRem(20)        
+        }
+        .edit_content{
+            padding: toRem(10) toRem(20) toRem(30) toRem(20);
+            font-size: toRem(12);
+            p:first-child label{
+                margin-top:0;
+            }            
+        }
+    }
+}
+
+.people_picker_pc {
+    position: absolute;    
+    top: 95px;
+    width: 600px;
+    height: 500px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    background: #fff;
+    z-index: 3;
+    &.bottom{
+        top: 95px!important;
+    }
+    &.top{
+        top:initial;
+        bottom: toRem(60px)!important;
+    }
+    .bg{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .m_body{
+        position: relative;
+        z-index: 1;
+    }
+    h3{
+        font-size:toRem(16);
+    }
+    .body {
+        width: 100%;
+        height: 390px;
+        margin: 15px auto 0 auto;
+    }
+
+    .body .allList,
+    .body .selectList {
+        width: 290px;
+        height: 100%;
+        box-sizing: border-box;
+        border: 1px solid #d9d9d9;
+        float: left;
+        border-radius: 5px;
+    }
+
+    .body .allList p,
+    .body .selectList p {
+        height: 30px;
+        line-height: 30px;
+        background: #f5f5f5;
+        box-sizing: border-box;
+        padding: 0 10px;        
+    }
+
+    .body .allList p em{
+        line-height: 30px;
+        font-style: normal;
+        i{
+            font-size:toRem(16);
+            vertical-align: bottom;
+            font-style: normal;
+            margin-right toRem(5)
+            color: #aaa;
+            display: inline-block;
+            height: 100%;
+            width: 21px;
+            text-align: center;
+        }
+    }
+    .body .allList p label,
+    .body .selectList p label {
+        vertical-align:bottom;
+        width: auto;
+        line-height: 30px;
+        display: inline-block;
+    }
+
+    .body .allList p span,
+    .body .selectList p span {
+        float: right;
+        font-size: toRem(12);
+    }
+
+    .body .allList p span {
+        color: #aaa;
+    }
+
+    .body .selectList p span {
+        color: #4aafce;
+        cursor: pointer;
+    }
+
+    .body .allList p input {
+        width: 14px;
+        height: 14px;
+        vertical-align: sub;
+        margin-right: 10px;
+    }
+
+    .body .allList ul,
+    .body .selectList ul {
+        padding: 10px;
+        height: 338px;
+        overflow: auto;
+        li{
+            overflow hidden;
+        }
+        li:hover{
+            border: none!important;
+        }
+    }
+
+    .body .allList ul label,
+    .body .selectList ul label {
+        vertical-align: initial;
+        width: auto;
+        line-height: 30px;
+        background: none;
+        float: left;
+    }
+    .body .selectList ul span {
+        vertical-align: initial;
+        width: auto;
+        line-height: 30px;
+        background: none;
+        float: right;
+        font-size: toRem(16);
+        color: #ed1919;
+        width: 20px;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .body .allList ul input {
+        width: 14px;
+        height: 14px;
+        vertical-align: sub;
+        margin-right: 10px;
+    }
+
+    .body .selectList {
+        width: 240px;
+        height: 100%;
+        box-sizing: border-box;
+        border: 1px solid #d9d9d9;
+        float: right;
+        border-radius: 5px;
+    }
+
+    .btn_group {
+        float: right;
+    }
+
+    .btn_group button {
+        background: none;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        padding: 5px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .btn_group button.cancel {
+        margin-right: 10px;
+    }
+
+    .btn_group button.ok {
+        background: #4aafce;
+        color: #fff;
+    }
+}
+
+.people_picker_mb{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    overflow: hidden;
+    .header{
+        background: #394264
+        height: 40px!important;
+        line-height: 40px!important;
+        color: #fff;
+        font-size: 16px;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        text-align: center;
+        span.back{
+            position: absolute;        
+            left: 10px;
+            img{                
+                height: 20px;
+                vertical-align: middle;
+            }
+            i{
+                font-style: normal;
+                padding-left 5px;
+            }
+        }
+        span.submit{
+            position: absolute;        
+            right: 10px;
+        }
+    }
+    .body{
+        padding-top:40px;
+        ul.list{
+            li{
+                width: 100%;
+                height: 50px;
+                line-height: 50px;
+                border-bottom 1px solid #ebebeb;
+                padding-left 15px;
+                box-sizing: border-box;
+                input{
+                    width: 15px;
+                    height: 15px;
+                    vertical-align: middle;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}

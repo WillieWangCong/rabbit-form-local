@@ -1,0 +1,112 @@
+@import './common.styl';
+.single_input{
+    width: 100%;
+    padding: toRem(10);
+    box-sizing: border-box;
+    background: #f5f5fc;
+    position: relative;
+    img{
+        display: block;
+        width: toRem(23);
+        height: toRem(20);
+        margin: toRem(5) auto;
+    }
+    h2{
+        color: #6e8ac9;
+        font-size: toRem(14);
+        text-align center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+.single_input_show{
+    width: 100%;
+    padding: toRem(20) toRem(40);
+    box-sizing: border-box;
+    background: #fff;
+    border-bottom: 1px dashed #f3f3f3;
+    cursor: move;
+    position: relative;
+    &:hover{
+        background: #f3fbff;
+        input{
+            border: 1px solid #89b6fa;               
+        }
+    }
+    &.on{
+        background: #fdf8f0;
+        input{
+            border: 1px solid #facd89;
+        }
+    }    
+    label{
+        font-size: toRem(14);
+        display: block;
+    }
+    input{
+        width: 100%
+        height: toRem(45);
+        border: 1px solid #e5e5e5;
+        box-sizing: border-box;
+    }
+    .shade{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+}
+.single_input_edit{
+    h3{
+        font-size: toRem(14);
+        font-weight: bold;        
+        background: #f3fbff;
+        &:after{
+            content: '';
+            display: inline-block;
+            width:0px;
+            height:0px;
+            border-left:toRem(5) solid transparent;
+            border-right:toRem(5) solid transparent;
+            border-bottom:toRem(10) solid #2f2f2f; 
+            font-size:0px;
+            line-height:0px;
+            float: right;
+            margin-top: toRem(5);
+            cursor: pointer;
+        }
+    }
+    .base_attr{
+        h3{        
+            padding: toRem(40) toRem(20) toRem(20) toRem(20);        
+        }
+        .edit_content{
+            padding: toRem(10) toRem(20) toRem(30) toRem(20);
+            font-size: toRem(12);            
+            p:first-child label{
+                margin-top:0;
+            }  
+            .error{
+                font-size toRem(20);
+            }                     
+        }   
+    }
+    .base_style{
+        h3{        
+            padding: toRem(20)        
+        }
+        .edit_content{
+            padding: toRem(10) toRem(20) toRem(30) toRem(20);
+            font-size: toRem(12);
+            p:first-child label{
+                margin-top:0;
+            }  
+            .error{
+                font-size toRem(20);
+            }             
+        }
+    }
+}
